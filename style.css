@@ -14,6 +14,7 @@
 }
 
 body {
+  
   background-color: #162237;
   font-family: 'LeBeauneNew', sans-serif;
   color: white;
@@ -40,6 +41,7 @@ p {
   margin-bottom: 2rem;
 }
 
+
 /* DRAGGABLE SYMBOL BANK */
 .drag-bank {
   display: flex;
@@ -55,6 +57,7 @@ p {
 .draggable {
   width: 60px;
   height: 60px;
+  
   object-fit: contain;
   cursor: grab;
   z-index: 20;
@@ -106,11 +109,11 @@ p {
 }
 
 /* PART 1 DROP ZONE POSITIONS */
-#part1 .drop-zone[data-position="0"] { top: 13%; left: 49.7%; }
-#part1 .drop-zone[data-position="1"] { top: 21.7%; left: 49.7%; }
-#part1 .drop-zone[data-position="2"] { top: 31%; left: 49.7%; }
-#part1 .drop-zone[data-position="3"] { top: 41.65%; left: 49.7%; }
-#part1 .drop-zone[data-position="4"] { top: 52.6%; left: 49.7%; }
+#part1 .drop-zone[data-position="0"] { top: 12.8%; left: 49.7%; }
+#part1 .drop-zone[data-position="1"] { top: 21.5%; left: 49.7%; }
+#part1 .drop-zone[data-position="2"] { top: 30.85%; left: 49.7%; }
+#part1 .drop-zone[data-position="3"] { top: 41.59%; left: 49.7%; }
+#part1 .drop-zone[data-position="4"] { top: 52.8%; left: 49.7%; }
 
 /* PART 2 DROP ZONE POSITIONS (adjust as needed) */
 #part2 .drop-zone[data-position="0"] { top: 21%; left: 49.9%; }
