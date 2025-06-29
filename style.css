@@ -14,7 +14,6 @@
 }
 
 body {
-
   background-color: #162237;
   font-family: 'LeBeauneNew', sans-serif;
   color: white;
@@ -41,31 +40,14 @@ p {
   margin-bottom: 2rem;
 }
 
-
-/* DRAGGABLE SYMBOL BANK */
-.drag-bank {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-  position: relative;
-  z-index: 10;
-  min-height: 70px;
-}
-
+/* GENERAL DRAGGABLE STYLING */
 .draggable {
   width: 60px;
   height: 60px;
-
   object-fit: contain;
   cursor: grab;
   z-index: 20;
   touch-action: none;
-}
-
-.draggable.dragging {
-  opacity: 0.5;
 }
 
 .draggable.dragging {
@@ -84,6 +66,7 @@ p {
   border: 2px solid #86dabd;
   border-radius: 10px;
   margin-bottom: 2rem;
+  overflow: hidden;
 }
 
 .background img {
@@ -124,7 +107,7 @@ p {
 #part1 .drop-zone[data-position="3"] { top: 41.59%; left: 49.7%; }
 #part1 .drop-zone[data-position="4"] { top: 52.8%; left: 49.7%; }
 
-/* PART 2 DROP ZONE POSITIONS (adjust as needed) */
+/* PART 2 DROP ZONE POSITIONS */
 #part2 .drop-zone[data-position="0"] { top: 21%; left: 49.9%; }
 #part2 .drop-zone[data-position="1"] { top: 52.7%; left: 81.5%; }
 #part2 .drop-zone[data-position="2"] { top: 52.8%; left: 18.3%; }
@@ -189,4 +172,90 @@ p {
   background-color: #1e2c44;
   border: 2px solid #86dabd;
   border-radius: 10px;
+}
+
+/* ───────── PART 1: DRAG OVERLAY (LEFT) ───────── */
+.drag-overlay {
+  position: absolute;
+  top: 8%;
+  left: 5%;
+  padding-top: 1rem;
+  background-color: rgba(22, 34, 55, 0.8);
+  border: 2px dashed #f15f24;
+  border-radius: 10px;
+  z-index: 10;
+  width: 80px;
+  min-height: 350px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.drag-overlay .draggable {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  cursor: grab;
+  z-index: 20;
+  margin-bottom: 1rem;
+}
+
+.drag-overlay .drag-bank {
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  background-color: rgba(22, 34, 55, 0.3);
+  pointer-events: all;
+}
+
+/* ───────── PART 2: FOUR INDIVIDUAL DRAG BANKS ───────── */
+#part2 .drag-bank {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: rgba(22, 34, 55, 0.85);
+  border: 2px dashed #f15f24;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+#part2 .drag-bank img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  cursor: grab;
+}
+
+/* Positioning each square */
+.bank-top {
+  top: 37%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bank-left {
+  top: 53%;
+  left: 35%;
+  transform: translateY(-50%);
+}
+
+.bank-right {
+  top: 53%;
+  right: 35%;
+  transform: translateY(-50%);
+}
+
+.bank-bottom {
+  bottom: 32%;
+  left: 50%;
+  transform: translateX(-50%);
 }
