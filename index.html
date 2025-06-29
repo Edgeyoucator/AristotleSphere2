@@ -9,31 +9,24 @@
 <body>
   <div class="container">
     <h1>Can You Arrange the Elements?</h1>
-    <p>Match the elements to Aristotle's law of natural motion by dragging them into place on the sphere.</p>
+    <p>Match the elements on the left with Aristotle's law of natural motion by dragging them into place on the sphere.</p>
     <p class="instruction-extra">Check your answer and hit the NEXT button if you're correct.</p>
-
-
-    <!-- Shared symbol bank -->
-    <div class="drag-bank">
-    <!-- Part 1 symbols -->
-        <img src="images/fire.png" class="draggable" draggable="true" id="fire" data-part="1" />
-        <img src="images/air.png" class="draggable" draggable="true" id="air" data-part="1" />
-        <img src="images/water.png" class="draggable" draggable="true" id="water" data-part="1" />
-        <img src="images/earth.png" class="draggable" draggable="true" id="earth" data-part="1" />
-        <img src="images/star.png" class="draggable" draggable="true" id="star" data-part="1" />
-
-        <!-- Part 2 symbols (with new IDs) -->
-        <img src="images/fire.png" class="draggable" draggable="true" id="fire2" data-part="2" style="display: none;" />
-        <img src="images/air.png" class="draggable" draggable="true" id="air2" data-part="2" style="display: none;" />
-        <img src="images/water.png" class="draggable" draggable="true" id="water2" data-part="2" style="display: none;" />
-        <img src="images/earth.png" class="draggable" draggable="true" id="earth2" data-part="2" style="display: none;" />
-    </div>
-
 
     <!-- PART 1 -->
     <div class="background background-part" id="part1">
       <button class="nav-button" id="toPart2">Next →</button>
       <button class="check-button" id="checkPart1">Check Answer</button>
+
+      <div class="drag-overlay">
+        <div class="drag-bank">
+          <img src="images/water.png" class="draggable" draggable="true" id="water" data-part="1" />
+          <img src="images/air.png" class="draggable" draggable="true" id="air" data-part="1" />
+          <img src="images/fire.png" class="draggable" draggable="true" id="fire" data-part="1" />
+          <img src="images/earth.png" class="draggable" draggable="true" id="earth" data-part="1" />
+          <img src="images/star.png" class="draggable" draggable="true" id="star" data-part="1" />
+        </div>
+      </div>
+
       <img src="images/Sphere Background.jpg" id="sphere" alt="Sphere Background" />
       <div class="drop-zone" data-part="1" data-position="0"></div>
       <div class="drop-zone" data-part="1" data-position="1"></div>
@@ -46,6 +39,24 @@
     <div class="background background-part" id="part2" style="display: none;">
       <button class="nav-button" id="toPart1">← Back</button>
       <button class="check-button" id="checkPart2">Check Answer</button>
+
+      <!-- FOUR INDIVIDUAL DRAG BANKS WITH drop-zone -->
+      <div class="drag-bank bank-top drop-zone">
+        <img src="images/air.png" class="draggable" draggable="true" id="air2" data-part="2" />
+      </div>
+
+      <div class="drag-bank bank-left drop-zone">
+        <img src="images/fire.png" class="draggable" draggable="true" id="fire2" data-part="2" />
+      </div>
+
+      <div class="drag-bank bank-right drop-zone">
+        <img src="images/water.png" class="draggable" draggable="true" id="water2" data-part="2" />
+      </div>
+
+      <div class="drag-bank bank-bottom drop-zone">
+        <img src="images/earth.png" class="draggable" draggable="true" id="earth2" data-part="2" />
+      </div>
+
       <img src="images/Transmutation.jpg" id="transmutation" alt="Transmutation Background" />
       <div class="drop-zone" data-part="2" data-position="0"></div>
       <div class="drop-zone" data-part="2" data-position="1"></div>
